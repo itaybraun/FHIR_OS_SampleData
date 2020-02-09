@@ -1,0 +1,34 @@
+{
+    "resourceType": "DetectedIssue",
+    "status": "final",
+  
+    "severity": "high",
+    "identifiedDateTime": "2020-02-08",
+    "author": {
+      "reference": "Practitioner/example"
+    },
+    "patient": {
+        "reference":"Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8"
+    },
+    "detail": "Risk of internal bleeding. Those who take acetaminophen along with the widely used blood-thinning drug warfarin may face the risk of serious internal bleeding. People on warfarin who take acetaminophen for at least seven days in a row should be closely watched for bleeding.",
+    "mitigation": [
+      {
+        "action": {
+          "coding": [
+            {
+              "system": "",
+              "code": "",
+              "display": ""
+            }
+          ],
+          "text": "Asked patient to discontinue regular use of Tylenol and to consult with clinician if they need to resume to allow appropriate INR monitoring"
+        },
+        "date": "2020-02-08",
+        "author": {
+          "reference": "Practitioner/example",
+          "display": "Dr. Adam Careful"
+        }
+      }
+    ]
+  }
+  
