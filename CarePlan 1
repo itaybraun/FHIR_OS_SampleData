@@ -1,0 +1,135 @@
+{
+  "resourceType": "CarePlan",
+  "contained": [
+    {
+      "resourceType": "Condition",
+      "id": "p1",
+      "clinicalStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+            "code": "active"
+          }
+        ]
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
+      "code": {
+        "text": "Obesity"
+      },
+      "subject": {
+        "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8",
+        "display": "Liam Jones"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "value": "12345"
+    }
+  ],
+  "instantiatesUri": [
+    "http://Copper-serpent.com/protocols/protocol-for-obesity"
+  ],
+  "basedOn": [
+    {
+      "display": "Management of Type 2 Diabetes"
+    }
+  ],
+  "status": "active",
+  "intent": "plan",
+  "category": [
+    {
+      "text": "Weight management plan"
+    }
+  ],
+  "description": "Manage obesity and weight loss",
+  "subject": {
+    "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8",
+    "display": "Liam Jones"
+  },
+  
+  "period": {
+    "end": "2020-12-31"
+  },
+  "created": "2020-02-08",
+  "author": {
+    "reference": "Practitioner/example",
+    "display": "Dr Adam Careful"
+  },
+  "careTeam": [
+    {
+      "reference": "CareTeam/example"
+    }
+  ],
+ 
+  "goal": [
+    {
+      "reference": "Goal/example"
+    }
+  ],
+  "activity": [
+    {
+      "outcomeCodeableConcept": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "161832001",
+              "display": "Progressive weight loss"
+            }
+          ]
+        }
+      ],
+      "outcomeReference": [
+        {
+          "reference": "Observation/example",
+          "display": "Weight Measured"
+        }
+      ],
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Weight Measured"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "27113001",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "status": "completed",
+        "statusReason": {
+          "text": "Achieved weight loss to mitigate diabetes risk."
+        },
+        "doNotPerform": false,
+        "scheduledTiming": {
+          "repeat": {
+            "frequency": 1,
+            "period": 1,
+            "periodUnit": "d"
+          }
+        },
+        "location": {
+          "display": "Patient's home"
+        },
+        "performer": [
+          {
+            "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8e",
+            "display": "Liam Jones"
+          }
+        ]
+      }
+    }
+  ]
+}
