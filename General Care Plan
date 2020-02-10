@@ -1,0 +1,62 @@
+{
+    "resourceType": "CarePlan",
+    "contained": [
+      {
+        "resourceType": "Condition",
+        "id": "p1",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "text": "General Care Plan"
+        },
+        "subject": {
+          "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8",
+          "display": "Liam Jones"
+        }
+      }
+    ],
+    "identifier": [
+      {
+        "value": "ID_of_the_plan_template_in_CopperSerpent_Systems"
+      }
+    ],
+    "instantiatesUri": [
+      "http://Copper-serpent.com/protocols/general-careplan"
+    ],
+   
+    "status": "active",
+    "intent": "plan",
+    "category": [
+      {
+        "text": "General Care Plan"
+      }
+    ],
+    "description": "Add here any activity who doesn't have a dedicated careplan.",
+    "subject": {
+      "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8",
+      "display": "Liam Jones"
+    },
+    
+    "period": {
+      "end": "2020-12-31"
+    },
+    "created": "2020-02-08",
+    "author": {
+           "display": "System"
+    }
+     
+  }
