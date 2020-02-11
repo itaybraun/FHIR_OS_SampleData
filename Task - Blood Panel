@@ -1,0 +1,72 @@
+{
+  "resourceType": "Task",
+  
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http:/copper-serpent/protocols",
+      "value": "Proc67493747"
+    }
+  ],
+  
+  "status": "accepted",
+  "businessStatus": {
+    "text": "Scheduled Visit"
+  },
+  "intent": "order",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "system": "https://loinc.org",
+        "code": "51990-0",
+        "display": "Basic metabolic panel - Blood"
+       
+      }
+    ]
+  },
+  "description": "Take a Blood Test",
+   "for": {
+    "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8",
+    "display": "Liam Jones"
+  },
+ 
+  "executionPeriod": {
+    "start": "2020-02-13T08:25:05+10:00",
+    "end": "2020-02-13T18:45:05+10:00"
+  },
+  "authoredOn": "2020-02-04T08:25:05+10:00",
+  "lastModified": "2020-02-05T18:45:05+10:00",
+  "requester": {
+    "reference": "Practitioner/87d80d38-8d50-46b8-8066-1af447ff4383",
+    "display": "Dr Adam Careful"
+  },
+  "performerType": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/task-performer-type",
+          "code": "performer",
+          "display": "Performer"
+        }
+      ],
+      "text": "Performer"
+    }
+  ],
+ 
+  "reasonCode": {
+    "text": "Care plan require complete blood count (CBC) every 4 months"
+  },
+  "note": [
+    {
+      "text": "This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test "
+    }
+  ],
+  "restriction": {
+    "repetitions": 1,
+    "period": {
+      "end": "2020-03-01T09:45:05+10:00"
+    }
+  }
+ 
+}
