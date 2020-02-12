@@ -1,0 +1,67 @@
+Not assigned yet
+
+{
+    "resourceType": "ServiceRequest",
+   
+    "status": "active",
+    "intent": "original-order",
+    "code": {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "51990-0"
+        }
+      ],
+      "text": "Basic metabolic panel - Blood"
+    },
+    "subject": {
+      "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8"
+    },
+    "occurrenceDateTime": "2020-02-13T09:33:27+07:00",
+    "requester": {
+      "reference": "Practitioner/87d80d38-8d50-46b8-8066-1af447ff4383",
+      "display": "Dr. Adam Careful"
+    },
+    "reasonCode": [
+      {
+        "text": "A family member reported the patient very week in the last few days"
+      }
+    ]
+  }
+  
+  
+Assigned to practitioner (Performer)
+{
+    "resourceType": "ServiceRequest",
+   
+    "status": "active",
+    "intent": "original-order",
+    "code": {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "51990-0"
+        }
+      ],
+      "text": "Basic metabolic panel - Blood"
+    },
+    "subject": {
+      "reference": "Patient/a96c50a3-fddc-451a-93b7-be3b7f129fc8"
+    },
+    "occurrenceDateTime": "2020-02-13T09:33:27+07:00",
+    "requester": {
+      "reference": "Practitioner/87d80d38-8d50-46b8-8066-1af447ff4383",
+      "display": "Dr. Adam Careful"
+    },
+    "performer": [
+        {
+          "reference": "Practitioner/8cba6c16-4f07-42de-9b06-b5af4f05f23c"
+        }
+      ],
+    "reasonCode": [
+      {
+        "text": "A family member reported the patient very week in the last few days"
+      }
+    ]
+  }
+  
