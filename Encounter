@@ -1,3 +1,4 @@
+
 {
     "resourceType": "Encounter",
     
@@ -47,6 +48,9 @@
     "period":{
         "start":"2020-02-15T21:47:02.704+00:00",
         "end":"2020-02-16T21:47:02.704+00:00"
+    },
+    "basedOn":{
+        "reference":"ServiceRequest/2baf748b-9f42-4971-8f68-1513846513d4"
     },
     "serviceProvider": {
       "reference": "Organization/f201"
