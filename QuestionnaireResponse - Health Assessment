@@ -1,0 +1,146 @@
+{
+  "resourceType": "QuestionnaireResponse",
+ 
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-03-08T05:09:03.000-04:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+    ]
+  },
+  "questionnaire": "Questionnaire/e94bb066-2236-438e-b4ee-d6d47f53ba4f",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/41c257ef-3d93-48e4-aeff-24c1667cd82c"
+    
+  },
+  "authored": "2020-03-08T09:09:03.250Z",
+  "item": [
+    {
+      "linkId": "/food",
+      "text": "Food",
+      "item": [
+        {
+          "linkId": "/food/1",
+          "text": "Within the past 12 months, did you worry that your food would run out before you got money to buy more?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "true",
+                "display": "Yes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "/food/2",
+          "text": "Within the past 12 months, did the food you bought just not last and you didn’t have money to get more?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "false",
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "/housingUtilities",
+      "text": "Housing/ Utilities",
+      "item": [
+        {
+          "linkId": "/housingUtilities/4",
+          "text": "Are you worried about losing your housing?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "true",
+                "display": "Yes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "/housingUtilities/5",
+          "text": "Within the past 12 months, have you been unable to get utilities (heat, electricity) when it was really needed?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "false",
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "/transportation",
+      "text": "Transportation",
+      "item": [
+        {
+          "linkId": "/transportation/6",
+          "text": "Within the past 12 months, has a lack of transportation kept you from medical appointments or from doing things needed for daily living?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "false",
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "/interpersonalSafety",
+      "text": "Interpersonal Safety",
+      "item": [
+        {
+          "linkId": "/interpersonalSafety/8",
+          "text": "Within the past 12 months, have you been hit, slapped, kicked or otherwise physically hurt by anyone?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "true",
+                "display": "Yes"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "/immediateNeed",
+      "text": "Optional: Immediate Need",
+      "item": [
+        {
+          "linkId": "/immediateNeed/10",
+          "text": "Are any of your needs urgent? For example, you don’t have food for tonight, you don’t have a place to sleep tonight, you are afraid you will get hurt if you go home today.",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "false",
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "/immediateNeed/11",
+          "text": "Would you like help with any of the needs that you have identified?",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "true",
+                "display": "Yes"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
