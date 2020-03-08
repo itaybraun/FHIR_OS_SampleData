@@ -1,0 +1,50 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "5397706",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-03-08T17:14:13.000-04:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+    ]
+  },
+  "questionnaire": "Questionnaire/framingham-hchd-lhc",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pat-70279",
+    "display": "JAE ACHARYA"
+  },
+  "authored": "2020-03-08T21:14:16.105Z",
+  "item": [
+    {
+      "linkId": "/age",
+      "text": "Age (in years)",
+      "answer": [
+        {
+          "valueDecimal": 45
+        }
+      ]
+    },
+    {
+      "linkId": "/46098-0",
+      "text": "Gender",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "LA2-8",
+            "display": "Male"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/8480-6",
+      "text": "Systolic blood pressure",
+      "answer": [
+        {
+          "valueDecimal": 109
+        }
+      ]
+    }
+  ]
+}
