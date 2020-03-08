@@ -1,9 +1,9 @@
 {
   "resourceType": "QuestionnaireResponse",
-  "id": "5397706",
+  "id": "5397707",
   "meta": {
     "versionId": "1",
-    "lastUpdated": "2020-03-08T17:14:13.000-04:00",
+    "lastUpdated": "2020-03-08T17:25:43.000-04:00",
     "profile": [
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
     ]
@@ -14,14 +14,14 @@
     "reference": "Patient/pat-70279",
     "display": "JAE ACHARYA"
   },
-  "authored": "2020-03-08T21:14:16.105Z",
+  "authored": "2020-03-08T21:25:45.567Z",
   "item": [
     {
       "linkId": "/age",
       "text": "Age (in years)",
       "answer": [
         {
-          "valueDecimal": 45
+          "valueDecimal": 55
         }
       ]
     },
@@ -38,11 +38,62 @@
       ]
     },
     {
+      "linkId": "/smokes",
+      "text": "Do you smoke?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "Y",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
       "linkId": "/8480-6",
       "text": "Systolic blood pressure",
       "answer": [
         {
           "valueDecimal": 109
+        }
+      ]
+    },
+    {
+      "linkId": "/2093-3",
+      "text": "Cholesterol [Mass/Vol]",
+      "answer": [
+        {
+          "valueDecimal": 56
+        }
+      ]
+    },
+    {
+      "linkId": "/2085-9",
+      "text": "Cholesterol in HDL [Mass/Vol]",
+      "answer": [
+        {
+          "valueDecimal": 80
+        }
+      ]
+    },
+    {
+      "linkId": "/antihypertensive",
+      "text": "Are you taking medication for high blood pressure?",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "Y",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "riskPercentage",
+      "text": "10-year HCHD Risk Probabilily",
+      "answer": [
+        {
+          "valueString": "0.97%"
         }
       ]
     }
