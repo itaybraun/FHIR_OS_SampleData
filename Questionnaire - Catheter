@@ -1,0 +1,260 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-03-08T03:37:43.000-04:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+    ]
+  },
+  "title": "Catheter Procedure Form",
+  "name": "Catheter Procedure Form",
+  "status": "Final",
+  "date": "2018-09-12T18:03:40-04:00",
+  "language": "en-US",
+  "version": "1.0",
+  "description":"Catheter Procedure as defined by Sall Health Services",
+  "subjectType": [
+    "Patient",
+    "Person"
+  ],
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression" : {
+        "name": "weight",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='/29463-7').answer.valueDecimal"
+      }
+    }, 
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression" : {
+        "name": "height",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='/8302-2').answer.valueDecimal*0.0254"
+      }
+    }
+  ],
+  "item": [
+    {
+        "type": "group",
+        "code": [
+        {
+            "system": "Custom",
+            "code": "introduction",
+            "display": "A form for Sall Employees. Used for catheter replace / insert / remove"
+        }
+        ],
+        "required": false,
+        "linkId": "/introduction",
+        "text": "A form for Sall Employees. Used for catheter replace / insert / remove"
+        },
+      {
+        "type": "group",
+        "code": [
+          {
+            "system": "Custom",
+            "code": "Catheter",
+            "display": "Catheter"
+          }
+        ],
+        "required": false,
+        "linkId": "/catheter",
+        "text": "Catheter",
+        "item":[
+                {
+            "extension": [
+                {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                "valueCodeableConcept": {
+                    "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                    }
+                    ],
+                    "text": "Drop down"
+                }
+                }
+            ],
+            "required": true,
+            "linkId": "/catheter/1",
+            "code": [
+                {
+                "system": "http://copper-serpent.com",
+                "code": "1111-1",
+                "display": "Catheter Procedure Type"
+                }
+            ],
+            "text": "Catheter Procedure Type",
+            "type": "choice",
+            "answerOption": [
+                {
+                "valueCoding": {
+                    "system": "http://snomed.org",
+                    "code": "1234566788",
+                    "display": "Catheter - Replace"
+                }
+                },
+                {
+                "valueCoding": {
+                    "system": "http://snomed.org",
+                    "code": "456",
+                    "display": "Catheter - Insert"
+                }
+                },
+                {
+                "valueCoding": {
+                    "system": "http://snomed.org",
+                    "code": "789",
+                    "display": "Catheter - Remove"
+                }
+                }
+            ]
+            },
+            {
+                "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                    "coding": [
+                        {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                        }
+                    ],
+                    "text": "Drop down"
+                    }
+                }
+                ],
+                "required": true,
+                "linkId": "/catheter/2",
+                "code": [
+                {
+                    "system": "http://copper-serpent.com",
+                    "code": "1111-2",
+                    "display": "Catheter: Temporary or Permanent"
+                }
+                ],
+                "text": "Catheter: Temporary or Permanent",
+                "type": "choice",
+                "answerOption": [
+                {
+                    "valueCoding": {
+                    "system": "http://copper-serpent.com/valueset/vs_cathtype",
+                    "code": "VS03456-1",
+                    "display": "Temporary Catheter"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "http://copper-serpent.com/valueset/vs_cathtype",
+                        "code": "VS03456-2",
+                        "display": "Permanent Catheter"
+                    }
+                }
+                ]
+            },
+            {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/questionnaire-item-control",
+                  "code": "drop-down",
+                  "display": "Drop down"
+                }
+              ],
+              "text": "Drop down"
+            }
+          }
+        ],
+        "required": true,
+        "linkId": "/catheter/3",
+        "code": [
+          {
+            "system": "http://copper-serpent.com",
+            "code": "1111-3",
+            "display": "Catheter Type"
+          }
+        ],
+        "text": "Catheter Type",
+        "type": "choice",
+        "answerOption": [
+          {
+            "valueCoding": {
+              "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+              "code": "VS03344-1",
+              "display": "Poly"
+            }
+          },
+          {
+            "valueCoding": {
+                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                "code": "VS03344-2",
+                "display": "Silicon"
+            }
+        },
+        {
+            "valueCoding": {
+                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                "code": "VS03344-3",
+                "display": "Other"
+            }
+          }
+        ]
+      }, 
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "cm"
+          }
+        }
+      ],
+      "required": true,
+      "linkId": "/catheter/4",
+      "code": [
+        {
+          "system": "http://snomed",
+          "code": "777",
+          "display": "Catheter Size (CH) in cm"
+        }
+      ],
+      "text": "Catheter Size (CH) in cm",
+      "type": "decimal"
+    },
+    {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+            "valueCoding": {
+              "system": "http://unitsofmeasure.org",
+              "code": "cm"
+            }
+          }
+        ],
+        "required": true,
+        "linkId": "/catheter/4",
+        "code": [
+          {
+            "system": "http://lsnomed",
+            "code": "454545",
+            "display": "Catheter Volumne (CC)"
+          }
+        ],
+        "text": "Catheter Volumne (CC)",
+        "type": "decimal"
+      }
+        
+      ]
+    }
+  ]
+}
