@@ -1,0 +1,254 @@
+{
+    "resourceType": "Questionnaire",
+   
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-03-12T09:16:20.437+00:00",
+        "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+        ]
+    },
+    "language": "en-US",
+    "version": "1.0",
+    "name": "ShotsForm",
+    "title": "Shots Form",
+    "status": "active",
+    "subjectType": [
+        "Patient"
+    ],
+    "date": "2020-03-13T18:03:40-04:00",
+    "description": "Shots (injections) Form, as defined by Sall Health Services",
+    "item": [
+        {
+            "linkId": "/introduction",
+            "code": [
+                {
+                    "system": "Custom",
+                    "code": "introduction",
+                    "display": "Shots (injections) Form"
+                }
+            ],
+            "text": "Shots (injections) Form",
+            "type": "group",
+            "required": false
+        },
+        {
+            "linkId": "/Shots",
+            "code": [
+                {
+                    "system": "LOINC",
+                    "code": "1234-5",
+                    "display": "Shots"
+                }
+            ],
+            "text": "Shots",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    
+                    "linkId": "/shots/1",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-1",
+                            "display": "Medication"
+                        }
+                    ],
+                    "text": "Medication",
+                    "type": "string",
+                    "required": true
+                    
+                },
+                {
+                    "linkId": "/shots/2",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-2",
+                            "display": "Dose"
+                        }
+                    ],
+                    "text": "Dose",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/shots/3",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-3",
+                            "display": "Adminitare way"
+                        }
+                    ],
+                    "text": "Adminitare way",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "234563978456",
+                                "display": "IM"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS03344-2",
+                                "display": "SC"
+                            }
+                        
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/shots/4",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com/",
+                            "code": "1111-3",
+                            "display": "organ"
+                        }
+                    ],
+                    "text": "Organ",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "234563978456",
+                                "display": "Arm"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS03344-2",
+                                "display": "Heap"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS03344-2",
+                                "display": "Buttocks"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS03344-2",
+                                "display": "stomach"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/shots/5",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-3",
+                            "display": "Side"
+                        }
+                    ],
+                    "text": "Side",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "234563978456",
+                                "display": "Left"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS03344-2",
+                                "display": "Right"
+                            }
+                        
+                        }
+                    ]
+                }
+            ]    
+        },      
+       
+        {
+            "linkId": "/summary",
+            "text": "Summary",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "linkId": "/summary/1",
+                    "text": "Flag Case Manager?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/summary/2",
+                    "text": "Abnormal incidents or side effects",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/summary/3",
+                    "text": "Abnormal incidents details",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ]
+} 
