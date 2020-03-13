@@ -220,6 +220,17 @@
                         
                         }
                     ]
+                },
+                {
+                    "linkId": "/shots/6",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent/imagestore"
+                        }
+                    ],
+                    "text": "Image",
+                    "type": "url",
+                    "required": false
                 }
             ]    
         },      
