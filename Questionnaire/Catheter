@@ -1,0 +1,273 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "982c917a-6a1c-4653-b4c8-ef24259c4aad",
+    "meta": {
+        "versionId": "5",
+        "lastUpdated": "2020-03-12T09:16:20.437+00:00",
+        "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+        ]
+    },
+    "language": "en-US",
+    "version": "1.0",
+    "name": "Catheter Procedure Form",
+    "title": "Catheter Procedure Form",
+    "status": "active",
+    "subjectType": [
+        "Patient",
+        "Person"
+    ],
+    "date": "2018-09-12T18:03:40-04:00",
+    "description": "Catheter Procedure as defined by Sall Health Services",
+    "item": [
+        {
+            "linkId": "/introduction",
+            "code": [
+                {
+                    "system": "Custom",
+                    "code": "introduction",
+                    "display": "A form for Sall Employees. Used for catheter replace / insert / remove"
+                }
+            ],
+            "text": "A form for Sall Employees. Used for catheter replace / insert / remove",
+            "type": "group",
+            "required": false
+        },
+        {
+            "linkId": "/catheter",
+            "code": [
+                {
+                    "system": "Custom",
+                    "code": "Catheter",
+                    "display": "Catheter"
+                }
+            ],
+            "text": "Catheter",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/catheter/1",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-1",
+                            "display": "Catheter Procedure Type"
+                        }
+                    ],
+                    "text": "Catheter Procedure Type",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "1234566788",
+                                "display": "Catheter - Replace"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "456",
+                                "display": "Catheter - Insert"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "789",
+                                "display": "Catheter - Remove"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Butto"
+                            }
+                        }
+                    ],
+                    "linkId": "/catheter/2",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-2",
+                            "display": "Catheter: Temporary or Permanent"
+                        }
+                    ],
+                    "text": "Catheter: Temporary or Permanent",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype",
+                                "code": "VS03456-1",
+                                "display": "Temporary Catheter"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype",
+                                "code": "VS03456-2",
+                                "display": "Permanent Catheter"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/catheter/3",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-3",
+                            "display": "Catheter Type"
+                        }
+                    ],
+                    "text": "Catheter Type",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS03344-1",
+                                "display": "Poly"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS03344-2",
+                                "display": "Silicon"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS03344-3",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "cm"
+                            }
+                        }
+                    ],
+                    "linkId": "/catheter/4",
+                    "code": [
+                        {
+                            "system": "http://snomed",
+                            "code": "777",
+                            "display": "Catheter Size (CH) in cm"
+                        }
+                    ],
+                    "text": "Catheter Size (CH) in cm",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "cm"
+                            }
+                        }
+                    ],
+                    "linkId": "/catheter/5",
+                    "code": [
+                        {
+                            "system": "http://snomed",
+                            "code": "454545",
+                            "display": "Catheter Volumne (CC)"
+                        }
+                    ],
+                    "text": "Catheter Volumne (CC)",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "linkId": "/catheter/6",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent/imagestore"
+                        }
+                    ],
+                    "text": "Image",
+                    "type": "url",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "linkId": "/summary",
+            "text": "Summary",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "linkId": "/summary/1",
+                    "text": "Flag Case Manager?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/summary/2",
+                    "text": "Abnormal incidents or side effects",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
