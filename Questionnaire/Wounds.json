@@ -1,0 +1,440 @@
+{
+    "resourceType": "Questionnaire",
+   
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-03-12T09:16:20.437+00:00",
+        "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+        ]
+    },
+    "language": "en-US",
+    "version": "1.0",
+    "name": "Wound Treatment Form",
+    "title": "Wound Treatment Form",
+    "status": "active",
+    "subjectType": [
+        "Patient"
+    ],
+    "date": "2020-03-13T18:03:40-04:00",
+    "description": "Wound treatment as defined by Sall Health Services",
+    "item": [
+        {
+            "linkId": "/introduction",
+            "code": [
+                {
+                    "system": "Custom",
+                    "code": "introduction",
+                    "display": "A form for Sall Employees. This form describes wound treatment"
+                }
+            ],
+            "text": "A form for Sall Employees. This form describes wound treatment",
+            "type": "group",
+            "required": false
+        },
+        {
+            "linkId": "/wound",
+            "code": [
+                {
+                    "system": "LOINC",
+                    "code": "1234-5",
+                    "display": "Wound Panel"
+                }
+            ],
+            "text": "Wound Treatment",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "extension": [
+                        
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop Down"
+                                    }
+                                ],
+                                "text": "Drop Down"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/1",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-1",
+                            "display": "Body Site"
+                        }
+                    ],
+                    "text": "Body Site",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "1234566788",
+                                "display": "Head"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "456",
+                                "display": "Upper Body"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://snomed.org",
+                                "code": "789",
+                                "display": "Arms"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/2",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-2",
+                            "display": "Wound Severity"
+                        }
+                    ],
+                    "text": "Wound Severity",
+                    "type": "decimal",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_woundseverity",
+                                "code": "1",
+                                "display": "1 - Light"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_woundseverity",
+                                "code": "2",
+                                "display": "2 - Moderate"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_woundseverity",
+                                "code": "3",
+                                "display": "3 - Bad"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_woundseverity",
+                                "code": "4",
+                                "display": "4 - Very Bad"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "cm"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/3",
+                    "code": [
+                        {
+                            "system": "http://snomed",
+                            "code": "777",
+                            "display": "Wound Size - Width"
+                        }
+                    ],
+                    "text": "Wound Size - Width (in cm)",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "cm"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/4",
+                    "code": [
+                        {
+                            "system": "http://snomed",
+                            "code": "777432",
+                            "display": "Wound Size - Length"
+                        }
+                    ],
+                    "text": "Wound Size - Length (in cm)",
+                    "type": "decimal",
+                    "required": true
+                },
+              
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/5",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1111-3",
+                            "display": "Wound Depth - General"
+                        }
+                    ],
+                    "text": "Wound Depth - General",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS03344-1",
+                                "display": "Superficial"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS03344-2",
+                                "display": "Deep"
+                            }
+                        
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                            "valueCoding": {
+                                "system": "http://unitsofmeasure.org",
+                                "code": "cm"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/6",
+                    "code": [
+                        {
+                            "system": "http://snomed",
+                            "code": "777",
+                            "display": "Wound Depth"
+                        }
+                    ],
+                    "text": "Wound Depth (cm)",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/wound/7",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1122-3",
+                            "display": "Secretion (a substance discharged from the wound)"
+                        }
+                    ],
+                    "text": "Secretion (a substance discharged from the wound)",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_secretion",
+                                "code": "VS00234",
+                                "display": "Without Secretion"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://copper-serpent.com/valueset/vs_cathtype2",
+                                "code": "VS002345",
+                                "display": "Has Secretion"
+                            }
+                        
+                        }
+                    ]
+                },
+                {
+                    "linkId": "/wound/8",
+                    "text": "Edema (sewlling)",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/wound/9",
+                    "text": "Infection",
+                    "type": "boolean",
+                    "required": true
+                   
+                },
+                {
+                    "linkId": "/wound/10",
+                    "text": "Infection Description",
+                    "type": "string",
+                    "required": false
+                    
+                },
+                {
+                    "linkId": "/wound/11",
+                    "text": "Odor (smell)",
+                    "type": "boolean",
+                    "required": true
+                   
+                },
+                {
+                    "linkId": "/wound/10",
+                    "text": "Medical Equipment used",
+                    "type": "string",
+                    "required": true
+                    
+                }
+            ]
+        },
+        {
+            "linkId": "/trend",
+            "text": "Trend",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ],
+                                "text": "Radio Button"
+                            }
+                        }
+                    ],
+                    "linkId": "/trend/1",
+                    "code": [
+                        {
+                            "system": "http://copper-serpent.com",
+                            "code": "1122-3",
+                            "display": "Overall Wound Impression"
+                        }
+                    ],
+                    "text": "Overall Wound Impression",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS00234",
+                                "display": "No change"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS002347",
+                                "display": "Improvement"
+                            }
+                        
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "snomed",
+                                "code": "VS002346",
+                                "display": "deterioration"
+                            }
+                        
+                        }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "linkId": "/summary",
+            "text": "Summary",
+            "type": "group",
+            "required": false,
+            "item": [
+                {
+                    "linkId": "/summary/1",
+                    "text": "Flag Case Manager?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/summary/2",
+                    "text": "Abnormal incidents or side effects",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "linkId": "/summary/3",
+                    "text": "Abnormal incidents details",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
